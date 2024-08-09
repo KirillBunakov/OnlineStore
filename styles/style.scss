@@ -1,0 +1,399 @@
+@import 'vars';
+
+@mixin center() {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center
+}
+
+@mixin center_space-between() {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+%lato_300{
+  font-family: Lato;
+  font-weight: 200;
+}
+
+%lato_400{
+  font-family: Lato;
+  font-weight: 300;
+}
+
+%lato_500{
+  font-family: Lato;
+  font-weight: 500;
+}
+
+%lato_700{
+  font-family: Lato;
+  font-weight: 700;
+}
+
+body{
+  // max-width: 1600px;
+}
+
+.newarravals_main{
+  position: relative;
+}
+
+.mainheader-background{
+  height: 148px;
+  background-color: #F8F3F4;
+  position: relative
+}
+
+.mainheader{
+  @include center_space-between();
+  height: 100%;
+}
+
+.mainheader_left{
+  font-size: 24px;
+  @extend %lato_400;
+}
+
+.mainheader_right{
+  font-size: 14px;
+  @extend %lato_300;
+}
+
+.mainheader_right .main_color{
+  font-size: 14px;
+  @extend %lato_700;
+}
+
+.main_color{
+  color: $main_color;
+}
+
+.main_image{
+  background-image: url('../img/men_newarrivals/ImageSlide.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 777px;
+  border: $border;
+
+}
+
+.collection-card{
+  @include center();
+  flex-direction: column;
+  width: 1140px;
+  background-color: #FFFFFF;
+  border: $border;
+  position: absolute;
+  top: 875px;
+  left: 50%;
+  transform: translateX(-50%);
+  &__title{
+    font-size: 14px;
+    @extend %lato_400;
+    margin-top: 64px;
+    margin-bottom: 12px;
+  }
+  &__border1{
+    border:none;
+    border-bottom: 3px solid $main_color;
+    width: 63px;
+    margin-bottom: 12px;
+  }
+  &__header{
+    font-size: 18px;
+    @extend %lato_400;
+    margin-bottom: 12px;
+  }
+  &__text{
+    font-size: 14px;
+    @extend %lato_400;
+    margin-bottom: 32px;
+    width: 565px;
+    text-align: center;
+  }
+  &__price{
+    font-size: 24px;
+    @extend %lato_400;
+    margin-bottom: 64px;
+  }
+  &__border2{
+    width: 641px;
+    border: none;
+    border-bottom: 1px solid #EAEAEA;
+    margin-bottom: 65px;
+  }
+  &__selectors-div{
+    display: flex;
+    gap: 22px;
+  }
+  &__selector{
+    border: none;
+    background-color: #FFFFFF;
+    @extend %lato_400;
+    font-size: 14px;
+    color: #6F6E6E;
+    outline: none;
+    margin-bottom: 48px;
+    background: url('../img/men_newarrivals/Vector.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    padding-right: 20px;
+    text-align: center;
+  }
+  &__button{
+    width: 212px;
+    height: 48px;
+    @extend %lato_400;
+    font-size: 16px;
+    color: $main_color;
+    border: 1px solid $main_color;
+    background-color: white;
+    text-align: center;
+    @include center();
+    margin-bottom: 64px;
+  }
+  &__button::before{
+    content: url('../img/men_newarrivals/Forma\ 1\ copy.png');
+    margin-right: 22px;
+  }
+}
+
+.empty{
+  height: 1440px;
+}
+
+.cards_lower{
+  margin-bottom: 128px;
+}
+
+input{
+  outline: none;
+}
+
+details summary::-webkit-details-marker {
+  display:none;
+  content: '';
+}
+
+details > summary::marker {
+  display: none;
+  content: '';
+}
+
+@media(max-width:1024px) {
+  .container{
+    max-width: 992px;
+  }
+  .main_image{
+    height: 624px;
+    padding-top: 60px;
+    padding-bottom: -60px;
+  }
+
+  .collection-card{
+    top: 834px;
+    max-width: 1024px;
+  }
+
+  .empty{
+    height: 1354px;
+  }
+
+  .collection-card__header{
+    margin-bottom: 48px;
+  }
+
+  .cards_lower{
+    gap: 8px;
+  }
+
+  .card_low{
+    width: 325px;
+  }
+
+  .card_low:hover .card_low_backgroundbtn{
+    width: 325px;
+    height: 379px;
+  }
+}
+
+@media(max-width:768px) {
+  .container{
+    max-width: 734px;
+  }
+
+  .main_image{
+    height: 624px;
+    padding-top: 60px;
+    padding-bottom: -60px;
+  }
+
+  .collection-card{
+    top: 834px;
+    max-width: 768px;
+  }
+
+  .empty{
+    height: 1354px;
+  }
+
+  .hidden_cart{
+    display: none;
+    visibility: hidden;
+  }
+  .collection-card__header{
+    margin-bottom: 48px;
+  }
+
+  .card_low:hover .card_low_backgroundbtn{
+    width: 325px;
+    height: 379px;
+  }
+
+}
+
+@media (max-width: 425px){
+  .container {
+    width: 401px;
+  }
+
+  .mainheader{
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+  }
+
+  .main_image{
+    height: 624px;
+    padding-top: 60px;
+    padding-bottom: -60px;
+  }
+
+  .collection-card{
+    width: 425px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 50%;
+    transform: translateX(-50%);
+      &__title{
+      margin-bottom: 27px;
+      }
+      &__text{
+        width: 300px;
+      }
+      &__border2{
+        width: 175px;
+        margin-bottom: 42px;
+      }
+      &__header{
+        margin-bottom: 32px;
+      }
+      &__price{
+        margin-bottom: 32px;
+      }
+      &__selectors-div select{
+        margin-bottom: 64px;
+      }
+  }
+
+  .card_low{
+    width: 401px;
+  }
+
+  .card_low img{
+    width: 401px;
+    height: 467px;
+  }
+
+  .card_low:hover .card_low_backgroundbtn{
+    width: 401px;
+    height: 467px;
+  }
+
+  .cards_lower{
+    margin-bottom: 64px;
+  }
+  .collection-card__selectors-div{
+    gap: 10px;
+    width: 401px;
+  }
+}
+
+
+
+
+
+@media (max-width: 375px){
+  .container {
+    width: 343px;
+  }
+
+  .mainheader{
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+  }
+
+  .main_image{
+    height: 624px;
+    padding-top: 60px;
+    padding-bottom: -60px;
+  }
+
+  .collection-card{
+    width: 375px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 50%;
+    transform: translateX(-50%);
+      &__title{
+      margin-bottom: 27px;
+      }
+      &__text{
+        width: 300px;
+      }
+      &__border2{
+        width: 175px;
+        margin-bottom: 42px;
+      }
+      &__header{
+        margin-bottom: 32px;
+      }
+      &__price{
+        margin-bottom: 32px;
+      }
+      &__selectors-div select{
+        margin-bottom: 64px;
+      }
+  }
+
+  .card_low{
+    width: 358px;
+  }
+
+  .card_low img{
+    width: 358px;
+    height: 417px;
+  }
+
+  .card_low:hover .card_low_backgroundbtn{
+    width: 358px;
+    height: 417px;
+  }
+
+  .cards_lower{
+    margin-bottom: 64px;
+  }
+
+  .collection-card__selectors-div{
+    gap: 10px;
+    width: 359px;
+  }
+}

@@ -1,0 +1,339 @@
+.mainheader_right {
+  font-family: Lato;
+  font-weight: 200;
+}
+
+.collection-card__button, .collection-card__selector, .collection-card__price, .collection-card__text, .collection-card__header, .collection-card__title, .mainheader_left {
+  font-family: Lato;
+  font-weight: 300;
+}
+
+.mainheader_right .main_color {
+  font-family: Lato;
+  font-weight: 700;
+}
+
+.newarravals_main {
+  position: relative;
+}
+
+.mainheader-background {
+  height: 148px;
+  background-color: #F8F3F4;
+  position: relative;
+}
+
+.mainheader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.mainheader_left {
+  font-size: 24px;
+}
+
+.mainheader_right {
+  font-size: 14px;
+}
+
+.mainheader_right .main_color {
+  font-size: 14px;
+}
+
+.main_color {
+  color: #F16D7F;
+}
+
+.main_image {
+  background-image: url("../img/men_newarrivals/ImageSlide.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 777px;
+  border: 1px solid #EAEAEA;
+}
+
+.collection-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 1140px;
+  background-color: #FFFFFF;
+  border: 1px solid #EAEAEA;
+  position: absolute;
+  top: 875px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.collection-card__title {
+  font-size: 14px;
+  margin-top: 64px;
+  margin-bottom: 12px;
+}
+.collection-card__border1 {
+  border: none;
+  border-bottom: 3px solid #F16D7F;
+  width: 63px;
+  margin-bottom: 12px;
+}
+.collection-card__header {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+.collection-card__text {
+  font-size: 14px;
+  margin-bottom: 32px;
+  width: 565px;
+  text-align: center;
+}
+.collection-card__price {
+  font-size: 24px;
+  margin-bottom: 64px;
+}
+.collection-card__border2 {
+  width: 641px;
+  border: none;
+  border-bottom: 1px solid #EAEAEA;
+  margin-bottom: 65px;
+}
+.collection-card__selectors-div {
+  display: flex;
+  gap: 22px;
+}
+.collection-card__selector {
+  border: none;
+  background-color: #FFFFFF;
+  font-size: 14px;
+  color: #6F6E6E;
+  outline: none;
+  margin-bottom: 48px;
+  background: url("../img/men_newarrivals/Vector.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  padding-right: 20px;
+  text-align: center;
+}
+.collection-card__button {
+  width: 212px;
+  height: 48px;
+  font-size: 16px;
+  color: #F16D7F;
+  border: 1px solid #F16D7F;
+  background-color: white;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 64px;
+}
+.collection-card__button::before {
+  content: url("../img/men_newarrivals/Forma 1 copy.png");
+  margin-right: 22px;
+}
+
+.empty {
+  height: 1440px;
+}
+
+.cards_lower {
+  margin-bottom: 128px;
+}
+
+input {
+  outline: none;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+  content: "";
+}
+
+details > summary::marker {
+  display: none;
+  content: "";
+}
+
+@media (max-width: 1024px) {
+  .container {
+    max-width: 992px;
+  }
+  .main_image {
+    height: 624px;
+    padding-top: 60px;
+    padding-bottom: -60px;
+  }
+  .collection-card {
+    top: 834px;
+    max-width: 1024px;
+  }
+  .empty {
+    height: 1354px;
+  }
+  .collection-card__header {
+    margin-bottom: 48px;
+  }
+  .cards_lower {
+    gap: 8px;
+  }
+  .card_low {
+    width: 325px;
+  }
+  .card_low:hover .card_low_backgroundbtn {
+    width: 325px;
+    height: 379px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 734px;
+  }
+  .main_image {
+    height: 624px;
+    padding-top: 60px;
+    padding-bottom: -60px;
+  }
+  .collection-card {
+    top: 834px;
+    max-width: 768px;
+  }
+  .empty {
+    height: 1354px;
+  }
+  .hidden_cart {
+    display: none;
+    visibility: hidden;
+  }
+  .collection-card__header {
+    margin-bottom: 48px;
+  }
+  .card_low:hover .card_low_backgroundbtn {
+    width: 325px;
+    height: 379px;
+  }
+}
+@media (max-width: 425px) {
+  .container {
+    width: 401px;
+  }
+  .mainheader {
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+  }
+  .main_image {
+    height: 624px;
+    padding-top: 60px;
+    padding-bottom: -60px;
+  }
+  .collection-card {
+    width: 425px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .collection-card__title {
+    margin-bottom: 27px;
+  }
+  .collection-card__text {
+    width: 300px;
+  }
+  .collection-card__border2 {
+    width: 175px;
+    margin-bottom: 42px;
+  }
+  .collection-card__header {
+    margin-bottom: 32px;
+  }
+  .collection-card__price {
+    margin-bottom: 32px;
+  }
+  .collection-card__selectors-div select {
+    margin-bottom: 64px;
+  }
+  .card_low {
+    width: 401px;
+  }
+  .card_low img {
+    width: 401px;
+    height: 467px;
+  }
+  .card_low:hover .card_low_backgroundbtn {
+    width: 401px;
+    height: 467px;
+  }
+  .cards_lower {
+    margin-bottom: 64px;
+  }
+  .collection-card__selectors-div {
+    gap: 10px;
+    width: 401px;
+  }
+}
+@media (max-width: 375px) {
+  .container {
+    width: 343px;
+  }
+  .mainheader {
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+  }
+  .main_image {
+    height: 624px;
+    padding-top: 60px;
+    padding-bottom: -60px;
+  }
+  .collection-card {
+    width: 375px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .collection-card__title {
+    margin-bottom: 27px;
+  }
+  .collection-card__text {
+    width: 300px;
+  }
+  .collection-card__border2 {
+    width: 175px;
+    margin-bottom: 42px;
+  }
+  .collection-card__header {
+    margin-bottom: 32px;
+  }
+  .collection-card__price {
+    margin-bottom: 32px;
+  }
+  .collection-card__selectors-div select {
+    margin-bottom: 64px;
+  }
+  .card_low {
+    width: 358px;
+  }
+  .card_low img {
+    width: 358px;
+    height: 417px;
+  }
+  .card_low:hover .card_low_backgroundbtn {
+    width: 358px;
+    height: 417px;
+  }
+  .cards_lower {
+    margin-bottom: 64px;
+  }
+  .collection-card__selectors-div {
+    gap: 10px;
+    width: 359px;
+  }
+}/*# sourceMappingURL=style.css.map */
